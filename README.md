@@ -22,7 +22,19 @@ Or install it yourself as:
 
 ## Usage
 
-### Client
+### Example
+
+This example is based on the original [Thrift Ruby Tutorial](https://thrift.apache.org/tutorial/rb).
+
+#### Thrift files
+
+You need to download [tutorial.thrift](https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=blob_plain;f=tutorial/tutorial.thrift) and [shared.thrift](https://git-wip-us.apache.org/repos/asf?p=thrift.git;a=blob_plain;f=tutorial/shared.thrift).
+
+To generate the Ruby code, run:
+
+    thrift -r --gen rb tutorial.thrift
+
+#### Client
 
 ```ruby
 $:.push('gen-rb')
@@ -85,7 +97,7 @@ rescue Thrift::Exception => tx
 end
 ```
 
-### Server
+#### Server
 
 ```ruby
 $:.push('gen-rb')
